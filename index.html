@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Privacy & Security - by Franklin S Z</title>
+
+	<link rel="stylesheet" href="style.css">
+	<script
+	src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+	<script src="node_modules/browserfs/dist/browserfs.min.js"></script>
+	<script>
+		BrowserFS.install(window);
+		// Configures BrowserFS to use the LocalStorage file system.
+		BrowserFS.configure({
+			fs: "LocalStorage"
+		}, function(e) {
+			if (e) {
+			// An error happened!
+			throw e;
+			}
+			// Otherwise, BrowserFS is ready-to-use!
+		});
+	</script>
+	<script src="js/cookies.js"></script>
+	<script src="js/pwd.js"></script>
+	<!--<script src="js/trigger.js"></script>-->
+
+</head>
+
+<body bgcolor="#42455a">
+
+	<ul class="menu">
+		<script>
+			function playAudio(id) {
+				document.getElementById(id).play()
+			}
+		</script>
+		<li onclick="playAudio('basicAudio')"><a href="#Basic" class="menu-item">Basic</a></li>
+		<li onclick="playAudio('malwareAudio')"><a href="#Malware" class="menu-item">Malware</a></li>
+		<li onclick="playAudio('vpnAudio')"><a href="#VPN" class="menu-item">VPN</a></li>
+		<li onclick="playAudio('cookiesAudio')"><a href="#Cookies" class="menu-item">Cookies</a></li>
+		<li onclick="playAudio('backstageAudio')"><a href="#Backstage" class="menu-item">Backstage</a></li>
+		<li onclick="playAudio('phishingAudio')"><a href="#Phishing" class="menu-item">Phishing</a></li>
+		<li onclick="playAudio('identity-theftAudio')"><a href="#Identity-theft" class="menu-item">Identity Theft</a></li>
+	</ul>
+
+	<h1 style="color:white; margin:10px; font-size: 50px;">Privacy & Security</h1>
+
+	<div>
+
+		<a name="Basic" id="Basic">
+		<h1 class="subhead">Common Sense</h1>
+		<audio controls id="basicAudio">
+			<source src='audio/Basic.mp3' type="audio/mpeg">
+		</audio>
+		<p>Starting with the basics. Sometimes the most effective are the simplest, and in this case, it can never be truer. Such common practices such as what you share online, your passwords all matter. That being said, get ready and buckle for an adventure! What you share online; It cannot get easier to see what you share than what you allow others to see. You should only share minor personal information if you must, but refrain from sharing anything personal at all. Minor information includes not very distinct traits such as hobbies, favorite objects, your pet and information that is near impossible to identify you. Major information that should not be shared are stuff like full names, birthdays, age, school, address and such where people can easily identify you. Another practice is using safe passwords, as it is the key to all your information even if you hide it from others. A whopping ~80% of data breaches in 2019 was faulted to weak passwords or password compromise. Do not use weak passwords that can easily be brute forced, yes, I’m looking at you with the password [name of pet]123. Strengthen your password by:
+			<ol class="list">
+				<li>Using an alphanumeric password</li>
+				<li>Replacing letters with look-alike characters (i.e. a with @)</li>
+				<li>Including special characters</li>
+				<li>Not using common known personal information</li>
+				<li>Using unorthodox practices to come up with phrases to add to your password (i.e. flip to a random page of your favorite book and use the first word on the page)</li>
+			</ol>
+			</p><p>Here, try to come up with a password and my Password-Validatorinator 7X8AAAΩ will check its strength
+			<div>
+				<script>
+					function Function(arg) {
+						var result = final(arg)
+
+						document.getElementById("result").style.visibility = "visible"
+						
+						if (arg.length ==0) {
+							document.getElementById("result").style.visibility = "hidden"
+						}
+						document.getElementById("bar").style.width = result[0]*2+3 +"px"
+						document.getElementById("strength").innerHTML = result[1]
+						document.getElementById("strength").style.color = result[2]
+						document.getElementById("bar").style.backgroundColor = result[2]
+						document.getElementById("strength").style.borderBottom = "2px " + result[2] + " solid"
+						document.getElementById("strength").style.borderLeft = "2px " + result[2] + " solid"
+					}
+				</script>
+				<input type="text" id="password" name="password" placeholder="Password" style="color:black; width:200px" onkeyup="Function(this.value)">
+				<div style="margin-left: 0px;padding:0px" id="result">
+					<div id="bar" style="height:5px;"></div>
+					<p id="strength" style="padding-left:0px;width:214px"></p>
+				</div>
+			Firewalls should always be kept on at all times as well. For every operating system, they provide a default firewall and make sure it is turned on else you are an easy snack to any hostile forces on the net. You should also routinely update and back up your devices, as well as scan your device for malicious programs as they can not only prey upon you on the net but infiltrate and perform reconnaissance in your machine. Using an antivirus is helpful, but limits your machines’ performance hence it rests upon your opinion on performance or security as a backup and scan routine should be enough. Talking about antivirus, let’s move on to the next topic:
+			</p>
+
+	</div>
+
+	<div>
+		
+		<a name="Malware" id = "Malware">
+		<h1 class="subhead">Malware e.t.c</h1>
+		<audio controls id = "malwareAudio">
+			<source src='audio/Malware.mp3' type="audio/mpeg">
+		</audio>
+		<p>Achoo! What was that? Oh, you just got a flue mate, don’t worry. Popup says, “Ooops, your files have been encrypted!”! Huh? Oh no, your computer caught a serious case of the WannaCry ransomware virus. Computer viruses are commonly misunderstood or not fully understood, they are simply pieces of software that replicates and latches itself onto other machines without permission or are unknowing to the owner (of the victim machines). This means phishing is not a virus. Worms are really similar to a virus, in that they replicate as well, but the way they spread are different. Viruses are activated by the victim, when they run a malicious program commonly found in attachments to emails or dangerous sites. Worms, however, run without any action needed as they exploit vulnerabilities to spread, and therefore are more dangerous. A common type of virus is a trojan horse, which will seem like a trustworthy program but is hiding malicious intent. Another type of threat is ransomware, which encrypts all the data on your machine and demands a payment to unencrypt. Protect yourself by having at least one antivirus, even if it is the default Windows Defender. Also play safe such as not downloading from unknown sites or opening suspicious mail. Did you know: A business falls to ransomware every 11 seconds.
+		</p>
+
+	</div>
+	
+	<div>
+		
+		<a name="VPN" id="VPN">
+		<h1 class="subhead">VPN? What is it?</h1>
+		<audio controls id = "vpnAudio">
+			<source src='audio/VPN.mp3' type="audio/mpeg">
+		</audio>
+		<p>You cannot call yourself a normal person nowadays if you haven’t heard of the famous VPNs. However, contrary to how well known they are, very few actually know how they operate. Such are myths that VPNs: makes internet faster, changes your device location to another country (half true), makes you completely anonymous, makes internet slower and more lies. But how do they work? When you communicate with another machine, example being visiting and interacting with a website, you are making a direct connection to the host machine. Proxies, or proxy machines are the middleman between you and the destination machine. They forward your requests and traffic to the destination machine. Why should I use this? Well, it is safer as they attackers cannot easily sniff your activities as the proxy machine is handling your requests, and the machine is making requests for you, meaning you are also using its location and other specifications of the proxy machines, meaning you can access content that are region locked for example. I just mentioned proxy, but we were talking about VPNs. VPNs are proxies but proxies are not VPNs. VPNs are specially configured proxy machines in that they implement safety functions when receiving and sending data or connecting to machines. Some common functions in VPNs compared to proxies are encrypted traffic and data, SSL protocols to verify connections and many many more an average mortal would not understand. There are also different types of VPNs, but I just and will only go over the basic idea. </p>
+		<img src="images/vpn.png">
+
+	</div>
+	
+	<div>
+		
+		<a name="Cookies" id="Cookies">
+		<h1 class="subhead">Cookies & Spyware</h1>
+		<audio controls id="cookiesAudio">
+			<source src='audio/Cookies.mp3' type="audio/mpeg">
+		</audio>
+		<p>One thing websites and my grandma have in common is that they always feed me upon meeting me. Have you ever logged in to a site, left and visited the site again and found that you are already logged in? That’s the work of cookies. They store information when you visit a site for them to use whenever you visit, it is generally very helpful. They can store your preferred settings, login credentials, credit cards, feed preferences and more which are all convenient. How is that dangerous? Well, think, what other information can they store, and what can they do with it? Oftentimes when you visit the site, they have a popup asking if it is ok to give cookies, but look closer, as they take more than they think. Always choose the minimal cookie settings or you do not have to use cookies at all. The information obtained can be used however they want without us knowing, and is still legal, as you failed to read the terms and conditions before you accept it.Spyware can vary, but is commonly known to either hijack some functions or all of your machine or can stay in hindsight harvesting data by monitoring your activities. Even right now, you could be a victim. Spyware often comes as a program knowingly or unknowingly, or as an extension to a program. Common types of spyware include keyloggers, adwares, and jacking software. </p>
+
+	</div>
+	
+	<div>
+		
+		<a name="Backstage" id="Backstage">
+		<h1 class="subhead">Behind the scenes; 3,2,1, Action!</h1>
+		<audio controls id="backstageAudio">
+			<source src='audio/Backstage.mp3' type="audio/mpeg">
+		</audio>
+		<p>Phew, quite a lot to remember to keep yourself safe, amiright? But what do the developers and engineers do? Don’t worry, they don’t slack off, welcome to Episode 1 of...uhh, I don’t have a good naming sense. Anyways, let’s get a glimpse into what these nerds have done  for us. How do antiviruses work? They scan data from traffic or your machine for malicious signatures. However, how do they do that? Malware often cause damage to the computer by taking over other functions, right? That means they must call the functions, commonly system files and there is a pattern for calling to the system files. Antiviruses can detect this and therefore identify, they can also intercept real time calls to these files sometimes utilising permissions. Firewalls are also similar in a way, but are different when you look closely. They also scan incoming data for threats, matching if they have malicious data patterns. They have extra functionalities as well, such as validating incoming data and the sender. When you are communicating with another machine, you send out data, however they do not and cannot have a set path to travel, so it goes to all machines in range. How do they identify who is the recipient then? The data block has a section dedicated for identification, like IP addresses, ARP and more geeky shit for verification. The firewalls’ job is to validate and control the traffic, as attackers can also try to forge or modify data or try to impersonate another machine. They also provide counter measures to common attacks, such as DOS (denial of service) and backdoors, by utilising the data packet filtering and identification technique I briefly touched upon earlier. There are many other things in play that are protecting you as well, but I have already wasted enough time trying to educate you and my fingers are getting tired. </p>
+
+	</div>
+	
+	<div>
+		
+		<a name="Phishing" id="Phishing">
+		<h1 class="subhead">Phishing</h1>
+		<audio controls id="phishingAudio">
+			<source src='audio/Phishing.mp3' type="audio/mpeg">
+		</audio>
+		<p>Sounding like fishing, it is practically the same. Bait and hook is the name of the game for both these sports. However, whilst fishing baits and hooks marine creatures, phishing baits you into handing over information, which as we should definitely know by now, other people knowing your information=very bad. The bait can vary; the most common phishing technique is to engage the victim by mail (email, SMS) posing as an enticing or trustworthy entity. In the conversation they will include a link, the way they hook depends on a huge variety. The link will look suspicious but sometimes they will hide it, for example using hyperlinks. This fake and suspicious site will have some login credential fill outs, commonly either impersonating the real services’ login or use the “You won an Iphone 8000! Claim now” bait. Let’s see if you can tell the difference between the fake site and the real site. </p>
+		<img src="images/phishing.jpg">
+		<p>The most common cyberattack today is also spear phishing, a type of phishing, and also one of the easiest. It’s hard, right? Watch out, ok?</p>
+
+	</div>
+
+	<div>
+
+		<a name="Identity Theft" id="Identity-theft">
+		<h1 class="subhead">Identity Theft & Credit Card Fraud</h1>
+		<audio controls id="identity-theftAudio">
+			<source src='audio/Identity-theft.mp3' type="audio/mpeg">
+		</audio>
+		<p>
+			Identity theft is where the perpetrator uses one’s personal information unknowingly, often to commit fraud, sometimes leading to credit card fraud. These are symptoms that you have not protected yourself well online, hence your personal information is unwillingly known. Credit card fraud is when the perpetrator makes purchases with your credit card without permission. Your only solution in this case is to either change your PIN, freeze your credit, or anyway to render the card useless or changing the credentials. Identity theft has a broader range of effects, such as using your information to sign up for credit cards, performing a wide range of fraudulent activities, impersonation and many more. The solutions depend on the respective effects and scenarios that occur and you know what they say, “prevention is better than cure” or “be safe than sorry”. Did you know: there were 650,572 victims of identity theft in 2019
+		</p>
+		</a>
+	</div>
+	<script>
+		function reveal(id) {
+			if (id == 'fail' | id == 'pass') {
+				document.getElementById('cookie-consent').style.visibility = 'hidden'
+			}
+			document.getElementById(id).classList.toggle("active")
+		}
+	</script>
+
+	<div class="popup" id="pass">
+		<div class="overlay">
+			<div class="content" style="background:green">
+				<h1 style="font-size:32px">
+					Congratulations!
+				</h1>
+				<p style="font-size: 18px;">
+					You have passed the cookie test
+				</p>
+				<button onclick="reveal('pass')" style="background:gold;color:gray;margin-top:55px;border-radius: 8px;border:4px;cursor: pointer;">High Five!</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="fail">
+		<div class="overlay">
+			<div class="content" style="background:red">
+				<h1 style="font-size:32px">
+					T_T Git gud nubb! :(
+				</h1>
+				<p>
+					Lol, you have failed. We have stolen your raisin bread, mwahahaha. Your personal information is now being uploaded to the net. Lol, noob.
+				</p>
+				<button onclick="reveal('fail')" style="background:gold;color:gray; margin-top:20px;border-radius: 8px;border:4px;cursor: pointer;">Procceed to cry</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="policies">
+		<div class="overlay">
+			<div class="content">
+				<div class="close-btn" onclick="reveal('policies')">&times;</div>
+				<h1 style="font-size: 23px;line-height: 1;">Cookies Policy &<br> Terms and Conditions</h1>
+				<p style="margin-top: 5px;">
+					We will take your cookie jar, and enact Stage 2!! I will gather an army of ducks using the cookies from this jar and conquer Great Britain!! Mwahaha... Huh, oopsies forget I said anything. *Ahem* Cookies store data to improve experiences, so convenient! Anyways, have fun! 
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="cookie-consent" id="cookie-consent">
+		<p>
+			We use cookies on this website to help improve our users' experience. To know more, read our<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" onclick="reveal('policies')">privacy policy</a>and<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" onclick="reveal('policies')">cookie policy</a></p>
+		</p>
+		<button class = "accept" onclick="reveal('fail')">
+			Accept
+		</button>
+		<button class="decline" onclick="reveal('pass')">
+			Decline
+		</button>
+	</div>
+</body>
+
+</html>
